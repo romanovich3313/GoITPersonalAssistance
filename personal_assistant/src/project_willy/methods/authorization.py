@@ -3,7 +3,18 @@ import os
 import pathlib
 import json
 import getpass
+from abc import ABC, abstractmethod
 
+
+class ClassAuthorization(ABC):
+
+    @abstractmethod
+    def load_users(self):
+        pass
+
+    @abstractmethod
+    def login(self):
+        pass
 
 class Authorization:
     def __init__(self):

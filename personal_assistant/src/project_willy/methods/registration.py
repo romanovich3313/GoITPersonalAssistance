@@ -4,7 +4,25 @@ import os
 import pathlib
 import json
 import getpass
+from abc import ABC, abstractmethod
 
+class ClassRegistration(ABC):
+
+    @abstractmethod
+    def load_user(self):
+        pass
+
+    @abstractmethod
+    def save_user(self):
+        pass
+
+    @abstractmethod
+    def validate_input(self):
+        pass
+
+    @abstractmethod
+    def registration_user(self):
+        pass
 
 class Registration:
     def __init__(self):
